@@ -14,11 +14,11 @@ var appServer = function(config) {
     config = config || {};
     var server_root = config.server_root || '';
     self.apps = {};
-
+    config.httpsEnabled = true;
     config.privateKey = "private-key.pem";
     config.certificate = "certificate.pem";
     config.httpsPort = "443";
-    
+
     self.log = function(msg) {
         if (config.log !== false) {
             console.log(msg);
