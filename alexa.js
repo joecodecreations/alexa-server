@@ -192,7 +192,7 @@ var appServer = function(config) {
         }
 
         // Find and load alexa-app modules
-        var app_dir = path.join(server_root, config.app_dir || 'apps');
+        var app_dir = path.join(server_root, config.app_dir || 'public_html/alexa/apps');
         if (fs.existsSync(app_dir) && fs.statSync(app_dir).isDirectory()) {
             self.log("Loading apps from: " + app_dir);
             self.load_apps(app_dir, config.app_root || '/alexa/');
